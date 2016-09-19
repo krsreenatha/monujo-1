@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="monujo">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Monujo</title>
+    <link rel="stylesheet" href=" vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href=" vendor/bootstrap/dist/css/bootstrap-theme.css">
+  </head>
+  <body class="container">
+    <div ng-view></div>
+    <!-- build:js js/index.min.js -->
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <script src="vendor/angular-resource/angular-resource.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controllers/IndexController.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

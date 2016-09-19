@@ -35,3 +35,11 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# Cloud9 related files
+.c9
+data
+mongod
+
+# Other settings
+public/vendor
