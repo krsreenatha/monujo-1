@@ -5,6 +5,11 @@ app.config(function($routeProvider){
       templateUrl: 'partials/index.html',
       controller: 'IndexController'
     });
+    
+    $routeProvider.when('/finances', {
+      templateUrl: 'partials/finances.html',
+      controller: 'FinancesController'
+    });
 
     $routeProvider.otherwise({redirectTo: '/'});
 });

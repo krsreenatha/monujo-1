@@ -1,8 +1,8 @@
-module.exports = function(){
+module.exports = function(app){
 	var controller = {};
 	
 	controller.index = function(req,res){
-		res.render('index');
+		return res.json({'name': 'Teste'});
 	}
 	
 	return controller;
