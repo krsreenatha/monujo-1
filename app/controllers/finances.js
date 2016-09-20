@@ -1,9 +1,10 @@
 module.exports = function(app){
 	var controller = {};
-	
-	controller.index = function(req,res){
+
+	controller.getIndex = function(req,res){
+		console.log('finances');
 		res.render('index');
 	}
-	
+
 	return controller;
 }

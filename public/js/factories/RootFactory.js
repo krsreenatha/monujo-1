@@ -1,5 +1,5 @@
 var app = angular('monujo');
 
-app.factory('Index', function($resource){
+app.factory('Root', function($resource){
   return $resource('/');
 });

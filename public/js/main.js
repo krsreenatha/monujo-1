@@ -2,14 +2,14 @@ var app = angular.module('monujo', ['ngRoute','ngResource']);
 
 app.config(function($routeProvider){
     $routeProvider.when('/', {
-      templateUrl: 'partials/index.html',
-      controller: 'IndexController'
+      templateUrl: 'partials/root.html',
+      controller: 'RootController'
     });
-    
+
     $routeProvider.when('/finances', {
       templateUrl: 'partials/finances.html',
       controller: 'FinancesController'
     });
 
-    $routeProvider.otherwise({redirectTo: '/'});
+    $routeProvider.otherwise({redirectTo: '/finances'});
 });
