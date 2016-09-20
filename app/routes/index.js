@@ -1,8 +1,8 @@
 module.exports = function(app){
-  var controller = {};
+  var controller = app.controllers.index;
 
   app.get('/', function(req, res){
-      res.render('index');
+    res.render('index');
   });
 
   return controller;

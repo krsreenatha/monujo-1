@@ -2,7 +2,7 @@ module.exports = function(app){
 	var controller = {};
 
 	controller.getIndex = function(req,res){
-		res.render('index');
+		res.json({'page':'index'});
 	}
 
 	return controller;
