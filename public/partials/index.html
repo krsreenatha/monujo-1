@@ -1,73 +1,40 @@
-{{ title }}
-<div class="row">
-	<div class="col-md-6">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-			  <div class="pull-right">
-			    <a href="/accounts/new" class="btn btn-xs btn-default">
-			      <span class="fa fa-plus"></span>
-			    </a>
-			  </div>
-			  <h3 class="panel-title">Accounts</h3>
-			</div>
-			
-			<div class="panel-body">
-				
-			</div>
-			
-			<div class="list-group" ng-repeat="bill in bills">
-				<div class="list-group-item">
-					<span class="pull-right text-right">
-		  			<strong>${{ bill.amount }}</strong>
-				    <div class="text-success">
-				    	<small>
-				    		sorted! <span class="fa fa-check-circle"></span>
-				    	</small>
-			    	</div>
-					</span>
-				<h4 class="list-group-item-heading">
-					<a href="/accounts/10?tab=sorted&amp;page=1">{{ bill.title }}</a>
-				</h4>
-				<p class="list-group-item-text">
-				  <small class="text-muted">{{ bill.date }}</time></small>
-				</p>
-			</div>
-		</div>
+<h2 class="ui header">{{ title }}</h2>
+<div class="ui grid">
+	<div class="six wide column">
+		<table class="top attached ui basic table">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Amount</th>
+					<th>Date</th>
+				</tr>
+			</thead>
+			<tbody ng-repeat="bill in bills">
+				<tr>
+					<td>{{ bill.title }}</td>
+					<td>{{ bill.amount }}</td>
+					<td>{{ bill.date | date }}</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
-	</div>
-	
-	<div class="col-md-6">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-			  <div class="pull-right">
-			    <a href="/accounts/new" class="btn btn-xs btn-default">
-			      <span class="fa fa-plus"></span>
-			    </a>
-			  </div>
-			  <h3 class="panel-title">Goals</h3>
-			</div>
-			
-			<div class="panel-body">
-				
-			</div>
-			
-			<div class="list-group" ng-repeat="bill in bills">
-				<div class="list-group-item">
-					<span class="pull-right text-right">
-		  			<strong>${{ bill.amount }}</strong>
-				    <div class="text-success">
-				    	<small>
-				    		sorted! <span class="fa fa-check-circle"></span>
-				    	</small>
-			    	</div>
-					</span>
-				<h4 class="list-group-item-heading">
-					<a href="/accounts/10?tab=sorted&amp;page=1">{{ bill.title }}</a>
-				</h4>
-				<p class="list-group-item-text">
-				  <small class="text-muted">{{ bill.date }}</time></small>
-				</p>
-			</div>
-		</div>
+	<div class="six wide column"></div>
+	<div class="four wide column">
+		<table class="top attached ui basic table">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Amount</th>
+					<th>Date</th>
+				</tr>
+			</thead>
+			<tbody ng-repeat="bill in bills">
+				<tr>
+					<td>{{ bill.title }}</td>
+					<td>{{ bill.amount }}</td>
+					<td>{{ bill.date | date }}</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </div>

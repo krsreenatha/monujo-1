@@ -1,1 +1,18 @@
-{{ total }}
+<div class="six wide column">
+	<table class="top attached ui basic table">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Amount</th>
+				<th>Date</th>
+			</tr>
+		</thead>
+		<tbody ng-repeat="finance in finances">
+			<tr>
+				<td>{{ finance.number }}</td>
+				<td>{{ finance.income }}</td>
+				<td>{{ finance.flag }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

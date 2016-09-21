@@ -9,86 +9,46 @@
   <link rel="stylesheet" href="vendor/semantic/dist/semantic.css">
   <!-- endbuild -->
   <title></title>
-</head>
-
-<body class="container">
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Monujo</a>
-      </div>
-  
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="navbar-form navbar-left">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-  <div ng-view></div>
-  <footer>
-    <div>
-      <a href="#">
-        <span class="fa fa-circle"></span> Monujo
-      </a>
-      — 
-      <a href="https://github.com/muniz95/monujo">
-        Fork me on GitHub
-      </a>
-    </div>
-  </footer>
   <!-- build:js js/index.min.js -->
   <script src="vendor/angular/angular.js"></script>
   <script src="vendor/angular-route/angular-route.js"></script>
   <script src="vendor/angular-resource/angular-resource.js"></script>
   <script src="vendor/jquery/dist/jquery.js"></script>
-  <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="vendor/semantic/dist/semantic.js"></script>
   <script src="js/main.js"></script>
   <script src="js/factories/IndexFactory.js"></script>
   <script src="js/factories/FinancesFactory.js"></script>
   <script src="js/controllers/IndexController.js"></script>
   <script src="js/controllers/FinancesController.js"></script>
   <!-- endbuild -->
+</head>
+
+<body>
+  <div class="ui secondary menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item" href="#/finances">
+        Finances
+      </a>
+      <a class="item">
+        Bills
+      </a>
+      <div class="right menu">
+        <div class="item">
+          <div class="ui icon input">
+            <input type="text" placeholder="Search...">
+            <i class="search link icon"></i>
+          </div>
+        </div>
+        <a class="ui item">
+          Logout
+        </a>
+      </div>
+    </div>
+  <div class="ui container">
+    <div ng-view></div>
+  </div>
 </body>
 
 </html>
