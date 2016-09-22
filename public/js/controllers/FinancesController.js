@@ -1,5 +1,5 @@
 var FinancesController = function($scope,Finances){
-  $scope.total = 0;
+  $scope.title = 'Finances';
   function listFinances(){
     Finances.query(
       function(finances){
