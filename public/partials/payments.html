@@ -1,0 +1,18 @@
+<table class="ui table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Spend</th>
+      <th>Receive</th>
+    </tr>
+  </thead>
+  <tbody ng-repeat="payment in payments">
+    <tr>
+      <td>{{ payment.name }}</td>
+      <td>{{ payment.category }}</td>
+      <td>{{ payment.spend }}</td>
+      <td>{{ payment.receive }}</td>
+    </tr>
+  </tbody>
+</table>

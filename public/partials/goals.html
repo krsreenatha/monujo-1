@@ -1,0 +1,21 @@
+<table class="ui table">
+  <thead>
+    <tr>
+      <th>Essential</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody ng-repeat="goal in goals">
+    <tr>
+      <td>{{ goal.description }}</td>
+      <td>{{ goal.value }}</td>
+      <td>{{ goal.period }}</td>
+      <td class="right aligned">{{ goal.total }}</td>
+    </tr>
+  </tbody>
+</table>
+<button class="ui primary button">
+	Save
+</button>

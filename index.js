@@ -6,5 +6,5 @@ app.get('/', function(req, res){
 });
 
 app.listen(app.get('port'), app.get('ip'), function(){
-  console.log('Listening on port ' + app.get('ip') + ':' + app.get('port'));
+  console.log('Listening on: ' + app.get('ip'));
 });
