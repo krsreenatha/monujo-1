@@ -7,32 +7,37 @@ app.config(function($routeProvider){
     });
 
     $routeProvider.when('/dashboard', {
-      templateUrl: 'partials/dashboard.html',
+      templateUrl: 'partials/dashboard/index.html',
       controller: 'DashboardController'
     });
 
+    $routeProvider.when('/accounts/:account_id', {
+      templateUrl: 'partials/account/index.html',
+      controller: 'AccountController'
+    });
+
     $routeProvider.when('/goals', {
-      templateUrl: 'partials/goals.html',
+      templateUrl: 'partials/goals/index.html',
       controller: 'GoalsController'
     });
 
     $routeProvider.when('/payments', {
-      templateUrl: 'partials/payments.html',
+      templateUrl: 'partials/payments/index.html',
       controller: 'PaymentsController'
     });
 
     $routeProvider.when('/categories', {
-      templateUrl: 'partials/categories.html',
+      templateUrl: 'partials/categories/index.html',
       controller: 'CategoriesController'
     });
 
     $routeProvider.when('/rules', {
-      templateUrl: 'partials/rules.html',
+      templateUrl: 'partials/rules/index.html',
       controller: 'RulesController'
     });
 
     $routeProvider.when('/reports', {
-      templateUrl: 'partials/reports.html',
+      templateUrl: 'partials/reports/index.html',
       controller: 'ReportsController'
     });
 

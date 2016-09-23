@@ -1,5 +1,6 @@
 module.exports = function(app){
 	var controller = {};
+	var Account = app.models.account;
 	
 	controller.index = function(req,res){
 		var accounts = [
@@ -28,7 +29,16 @@ module.exports = function(app){
 	}
 	
 	controller.getAccount = function(req,res){
-		
+		var _id = req.params.id;
+    Account.findById(_id).exec()
+	    .then(function(account){
+	      if(!account) throw new Error("Account not found!");
+	      res.json(account);
+	    },
+	    function(err){
+	      console.error(err);
+	      res.status(404).json(err);
+	    });
 	}
 	
 	return controller;

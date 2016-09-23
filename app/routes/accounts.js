@@ -3,4 +3,7 @@ module.exports = function(app){
 	
 	app.route('/accounts')
 		.get(controller.index);
+	
+	app.route('/accounts/:id')
+		.get(controller.getAccount);
 }
