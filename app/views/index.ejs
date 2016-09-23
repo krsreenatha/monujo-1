@@ -17,16 +17,22 @@
   <script src="vendor/jquery/dist/jquery.js"></script>
   <script src="vendor/semantic/dist/semantic.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/InitComponents.js"></script>
   <script src="js/factories/IndexFactory.js"></script>
-  <script src="js/factories/FinancesFactory.js"></script>
+  <script src="js/factories/AccountsFactory.js"></script>
   <script src="js/factories/GoalsFactory.js"></script>
   <script src="js/factories/PaymentsFactory.js"></script>
   <script src="js/factories/CategoriesFactory.js"></script>
+  <script src="js/factories/RulesFactory.js"></script>
+  <script src="js/factories/ReportsFactory.js"></script>
   <script src="js/controllers/IndexController.js"></script>
-  <script src="js/controllers/FinancesController.js"></script>
+  <script src="js/controllers/DashboardController.js"></script>
+  <script src="js/controllers/AccountsController.js"></script>
   <script src="js/controllers/GoalsController.js"></script>
   <script src="js/controllers/PaymentsController.js"></script>
   <script src="js/controllers/CategoriesController.js"></script>
+  <script src="js/controllers/RulesController.js"></script>
+  <script src="js/controllers/ReportsController.js"></script>
   <!-- endbuild -->
 </head>
 
@@ -36,12 +42,17 @@
         <i class="money icon"></i>
         Monujo
       </a>
-      <a class="item" href="#/finances">
+      <a class="item" href="#/dashboard">
         Dashboard
       </a>
-      <a class="item">
+      <div class="ui dropdown item">
         Accounts
-      </a>
+        <div class="menu">
+          <a class="item" href="#/accounts/1">Visa</a>
+          <a class="item" href="#/accounts/2">MasterCard</a>
+          <a class="item" href="#/accounts/3">Elo</a>
+        </div>
+      </div>
       <a class="item" href="#/goals">
         Goals
       </a>
@@ -54,7 +65,7 @@
       <a class="item" href="#/rules">
         Sorting Rules
       </a>
-      <a class="item">
+      <a class="item" href="#/reports">
         Reports
       </a>
       <div class="right menu">

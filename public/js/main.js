@@ -6,9 +6,9 @@ app.config(function($routeProvider){
       controller: 'IndexController'
     });
 
-    $routeProvider.when('/finances', {
-      templateUrl: 'partials/finances.html',
-      controller: 'FinancesController'
+    $routeProvider.when('/dashboard', {
+      templateUrl: 'partials/dashboard.html',
+      controller: 'DashboardController'
     });
 
     $routeProvider.when('/goals', {
@@ -31,5 +31,11 @@ app.config(function($routeProvider){
       controller: 'RulesController'
     });
 
-    $routeProvider.otherwise({redirectTo: '/finances'});
+    $routeProvider.when('/reports', {
+      templateUrl: 'partials/reports.html',
+      controller: 'ReportsController'
+    });
+
+    $routeProvider.otherwise({redirectTo: '/dashboard'});
+    
 });

@@ -1,0 +1,16 @@
+<table class="ui table">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th class="collapsing right allign">Spent</th>
+      <th class="collapsing right allign">Received</th>
+    </tr>
+  </thead>
+  <tbody ng-repeat="report in reports">
+    <tr>
+      <td>{{ report.category }}</td>
+      <td class="collapsing right allign">{{ report.spent }}</td>
+      <td class="collapsing right allign">{{ report.received }}</td>
+    </tr>
+  </tbody>
+</table>
