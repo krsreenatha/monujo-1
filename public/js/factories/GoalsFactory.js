@@ -1,5 +1,5 @@
 var app = angular.module('monujo');
 
-app.factory('Goals', function($resource){
+app.factory('Goal', function($resource){
   return $resource('/goals/:id')
 });

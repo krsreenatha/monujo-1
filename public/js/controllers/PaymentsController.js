@@ -1,7 +1,7 @@
-var PaymentsController = function($scope,Payments){
+var PaymentsController = function($scope,Payment){
   $scope.title = 'Payments';
   function listPayments(){
-    Payments.query(
+    Payment.query(
       function(payments){
         $scope.payments = payments;
       },
@@ -11,10 +11,10 @@ var PaymentsController = function($scope,Payments){
       }
     );
   }
-  
+
   listPayments();
 };
-PaymentsController.$inject = ['$scope','Payments'];
+PaymentsController.$inject = ['$scope','Payment'];
 
 var app = angular.module('monujo');
 app.controller('PaymentsController', PaymentsController);

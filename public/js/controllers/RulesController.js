@@ -1,7 +1,7 @@
-var RulesController = function($scope,Rules){
+var RulesController = function($scope,Rule){
   $scope.title = 'Rules';
   function listRules(){
-    Rules.query(
+    Rule.query(
       function(rules){
         $scope.rules = rules;
       },
@@ -16,7 +16,7 @@ var RulesController = function($scope,Rules){
   });
   listRules();
 };
-RulesController.$inject = ['$scope','Rules'];
+RulesController.$inject = ['$scope','Rule'];
 
 var app = angular.module('monujo');
 app.controller('RulesController', RulesController);

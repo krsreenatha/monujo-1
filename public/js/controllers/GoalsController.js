@@ -1,7 +1,7 @@
-var GoalsController = function($scope,Goals){
+var GoalsController = function($scope,Goal){
   $scope.title = 'Goals';
   function listGoals(){
-    Goals.query(
+    Goal.query(
       function(goals){
         $scope.goals = goals;
       },
@@ -11,10 +11,10 @@ var GoalsController = function($scope,Goals){
       }
     );
   }
-  
+
   listGoals();
 };
-GoalsController.$inject = ['$scope','Goals'];
+GoalsController.$inject = ['$scope','Goal'];
 
 var app = angular.module('monujo');
 app.controller('GoalsController', GoalsController);

@@ -1,7 +1,7 @@
-var CategoriesController = function($scope,Categories){
+var CategoriesController = function($scope,Category){
   $scope.title = 'Categories';
   function listCategories(){
-    Categories.query(
+    Category.query(
       function(categories){
         $scope.categories = categories;
       },
@@ -11,10 +11,10 @@ var CategoriesController = function($scope,Categories){
       }
     );
   }
-  
+
   listCategories();
 };
-CategoriesController.$inject = ['$scope','Categories'];
+CategoriesController.$inject = ['$scope','Category'];
 
 var app = angular.module('monujo');
 app.controller('CategoriesController', CategoriesController);

@@ -1,7 +1,7 @@
-var ReportsController = function($scope,Reports){
+var ReportsController = function($scope,Report){
   $scope.title = 'Reports';
   function listReports(){
-    Reports.query(
+    Report.query(
       function(reports){
         $scope.reports = reports;
       },
@@ -13,7 +13,7 @@ var ReportsController = function($scope,Reports){
   }
   listReports();
 };
-ReportsController.$inject = ['$scope','Reports'];
+ReportsController.$inject = ['$scope','Report'];
 
 var app = angular.module('monujo');
 app.controller('ReportsController', ReportsController);

@@ -1,7 +1,7 @@
-var DashboardController = function($scope,Goals,Account){
+var DashboardController = function($scope,Goal,Account){
   $scope.title = 'Dashboard';
   function listDashboard(){
-    Goals.query(
+    Goal.query(
       function(goals){
         $scope.goals = goals;
       },
@@ -20,10 +20,10 @@ var DashboardController = function($scope,Goals,Account){
       }
     );
   }
-  
+
   listDashboard();
 };
-DashboardController.$inject = ['$scope','Goals','Account'];
+DashboardController.$inject = ['$scope','Goal','Account'];
 
 var app = angular.module('monujo');
 app.controller('DashboardController', DashboardController);
