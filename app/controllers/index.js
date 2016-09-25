@@ -1,9 +1,9 @@
 module.exports = function(app){
-	var controller = {};
+	var controller = {}
 
 	controller.index = function(req,res){
-		return res.json({'name': 'Teste'});
+		return res.json({'name': 'Teste'})
 	}
 
-	return controller;
+	return controller
 }

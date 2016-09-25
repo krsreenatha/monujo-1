@@ -1,39 +1,39 @@
 module.exports = function(app){
-	var controller = {};
-	
+	var controller = {}
+
 	controller.index = function(req,res){
 		var rules = [
 			{
-        contains: '',
+				contains: '',
 				name: 'Bank Charges',
-        category: 1,
-        tags: '',
+				category: 1,
+				tags: '',
 				flag: 1
 			},
 			{
-        contains: '',
+				contains: '',
 				name: 'Bills & Utilities',
-        category: 1,
-        tags: '',
+				category: 1,
+				tags: '',
 				flag: 1
 			},
 			{
-        contains: '',
+				contains: '',
 				name: 'Business Expenses',
-        category: 1,
-        tags: '',
+				category: 1,
+				tags: '',
 				flag: 1
 			},
 			{
-        contains: '',
+				contains: '',
 				name: 'Credit Card',
-        category: 1,
-        tags: '',
+				category: 1,
+				tags: '',
 				flag: 1
 			}
-		];
-		res.json(rules);
+		]
+		res.json(rules)
 	}
-	
-	return controller;
+
+	return controller
 }

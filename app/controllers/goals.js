@@ -1,8 +1,9 @@
 module.exports = function(app) {
-	var controller = {};
+	var controller = {}
 
 	controller.index = function(req, res) {
-		var goals = [{
+		var goals = [
+			{
 				description: 'Bank Charges',
 				value: 154.0,
 				total: 154.00,
@@ -57,10 +58,10 @@ module.exports = function(app) {
 				category: 1,
 				period: 1
 			}
-		];
+		]
 
-		res.json(goals);
+		res.json(goals)
 	}
 
-	return controller;
+	return controller
 }

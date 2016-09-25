@@ -1,6 +1,6 @@
 module.exports = function(app){
-	var controller = {};
-	
+	var controller = {}
+
 	controller.index = function(req,res){
 		var payments = [
 			{
@@ -27,9 +27,9 @@ module.exports = function(app){
 				spend: 100.0,
 				receive: 10.0
 			}
-		];
-		res.json(payments);
+		]
+		res.json(payments)
 	}
-	
-	return controller;
+
+	return controller
 }

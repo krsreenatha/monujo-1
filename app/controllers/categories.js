@@ -1,6 +1,6 @@
 module.exports = function(app){
-	var controller = {};
-	
+	var controller = {}
+
 	controller.index = function(req,res){
 		var categories = [
 			{
@@ -19,9 +19,9 @@ module.exports = function(app){
 				name: 'Credit Card',
 				type: 1
 			}
-		];
-		res.json(categories);
+		]
+		res.json(categories)
 	}
-	
-	return controller;
+
+	return controller
 }

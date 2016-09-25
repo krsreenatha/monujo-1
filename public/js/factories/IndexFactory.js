@@ -1,5 +1,7 @@
-var app = angular.module('monujo');
+var app = angular.module('monujo')
 
 app.factory('IndexFactory', function($resource){
-  return $resource('/')
-});
+	return $resource('/')
+})
+
+/*global angular:true*/

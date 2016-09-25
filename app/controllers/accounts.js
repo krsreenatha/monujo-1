@@ -1,7 +1,7 @@
 module.exports = function(app){
-	var controller = {};
-	var Account = app.models.account;
-	
+	var controller = {}
+	var Account = app.models.account
+
 	controller.index = function(req,res){
 		var accounts = [
 			{
@@ -24,22 +24,24 @@ module.exports = function(app){
 				number: 1,
 				type: 1
 			}
-		];
-		res.json(accounts);
+		]
+		res.json(accounts)
 	}
-	
+
 	controller.getAccount = function(req,res){
-		var _id = req.params.id;
-    Account.findById(_id).exec()
-	    .then(function(account){
-	      if(!account) throw new Error("Account not found!");
-	      res.json(account);
-	    },
-	    function(err){
-	      console.error(err);
-	      res.status(404).json(err);
-	    });
+		var _id = req.params.id
+		Account.findById(_id).exec()
+		.then(function(account){
+			if(!account) throw new Error('Account not found!')
+			res.json(account)
+		},
+		function(err){
+			console.error(err)
+			res.status(404).json(err)
+		})
 	}
-	
-	return controller;
+
+	return controller
 }
+
+/*eslint no-console: ["error", { allow: ["log","error"] }] */
