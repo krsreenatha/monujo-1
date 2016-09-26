@@ -3,4 +3,5 @@ module.exports = function(app){
 
 	app.route('/goals')
 		.get(controller.index)
+		.post(controller.save)
 }

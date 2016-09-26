@@ -1,3 +1,4 @@
+<h2 class="ui header">Goals</h2>
 <table class="ui table">
   <thead>
     <tr>
@@ -10,12 +11,17 @@
   <tbody ng-repeat="goal in goals">
     <tr>
       <td>{{ goal.description }}</td>
-      <td>{{ goal.value }}</td>
+      <td>
+        <div class="ui labeled input">
+          <div class="ui label">$</div>
+          <input type="text" name="value" ng-model="goal.value"/>
+        </div>
+      </td>
       <td>{{ goal.period }}</td>
       <td class="right aligned">{{ goal.total }}</td>
     </tr>
   </tbody>
 </table>
-<button class="ui primary button">
+<button class="ui primary button" ng-click="saveGoals()">
 	Save
 </button>

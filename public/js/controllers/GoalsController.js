@@ -11,6 +11,20 @@ var GoalsController = function($scope,Goal){
 			}
 		)
 	}
+	
+	$scope.saveGoals = function(){
+		$scope.goals.forEach(function(goal) {
+			goal.$save()
+	      .then(function(){
+	        $scope.message = {text: "Feito!"}
+	        listGoals()
+	      })
+	      .catch(function(err){
+	        $scope.message = {text: "Não foi possível salvar."}
+	        console.log(err)
+	      })
+		});
+	}
 
 	listGoals()
 }
