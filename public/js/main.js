@@ -26,6 +26,11 @@ app.config(function($routeProvider){
 		controller: 'PaymentsController'
 	})
 
+	$routeProvider.when('/payments/new', {
+		templateUrl: 'partials/payments/form.html',
+		controller: 'PaymentController'
+	})
+
 	$routeProvider.when('/categories', {
 		templateUrl: 'partials/categories/index.html',
 		controller: 'CategoriesController'

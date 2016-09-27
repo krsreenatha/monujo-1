@@ -3,4 +3,5 @@ module.exports = function(app){
 
 	app.route('/payments')
 		.get(controller.index)
+		.post(controller.save)
 }

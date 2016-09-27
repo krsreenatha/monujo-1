@@ -1,0 +1,35 @@
+<h1 class="ui header">New payment</h1>
+<div class="ui dividing"></div>
+<form class="ui form">
+  <div class="field six wide">
+    <label>Name</label>
+    <div class="field">
+      <input type="text" name="name" ng-model="payment.name">
+    </div>
+  </div>
+  <div class="field six wide">
+    <label>Type</label>
+    <div class="field">
+      <input type="text" name="type" ng-model="payment.type">
+    </div>
+  </div>
+  <div class="field six wide">
+    <label>Amount</label>
+    <div class="field">
+      <input type="text" name="amount" ng-model="payment.amount">
+    </div>
+  </div>
+  <div class="field six wide">
+    <label>Category</label>
+    <div class="field">
+      <input type="text" name="category" ng-model="payment.category">
+    </div>
+  </div>
+  <div class="field six wide">
+    <label>Date</label>
+    <div class="field">
+      <input type="text" name="date" ng-model="payment.date">
+    </div>
+  </div>
+  <div class="ui button" tabindex="0" ng-click="save()">Save</div>
+</form>
