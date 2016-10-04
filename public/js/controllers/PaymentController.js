@@ -21,7 +21,7 @@ app.controller('PaymentController', function($scope,$routeParams,Payment){
           $scope.message = {text: "Done!"};
           $scope.payment = new Payment();
           window.setTimeout(function(){
-            window.location = "#/";
+            window.location = "#/payments";
           },3000);
         })
         .catch(function(err){

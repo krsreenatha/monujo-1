@@ -14,13 +14,13 @@ module.exports = function(app){
 	}
 	
 	controller.save = function(req,res){
-		controller.salvarPayment = function(req,res){
     var _id = req.body._id;
     var data = {
     	'name': req.body.name,
+			'type': req.body.type,
+			'amount': req.body.amount,
 			'category': req.body.category,
-			'spend': req.body.spend,
-			'receive': req.body.receive
+			'date': req.body.date
     };
     if(_id){
       Payment.findByIdAndUpdate(_id, data).exec()
@@ -42,7 +42,6 @@ module.exports = function(app){
         res.status(500).json(err);
       });
     }
-  };
 	}
 
 	return controller

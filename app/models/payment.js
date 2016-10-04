@@ -6,16 +6,20 @@ module.exports = function(app){
 			type: String,
 			required: true
 		},
+		type: {
+			type: Number,
+			required: true
+		},
+		amount: {
+			type: Number,
+			required: true
+		},
 		category: {
 			type: Number,
 			required: true
 		},
-		spend: {
-			type: Number,
-			required: true
-		},
-		receive: {
-			type: Number,
+		date: {
+			type: Date,
 			required: true
 		}
 	})
