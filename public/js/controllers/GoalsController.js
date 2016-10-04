@@ -1,7 +1,4 @@
 var GoalsController = function($scope,Goal){
-	$scope.$on('$viewContentLoaded', function() {
-		$('.dropdown').dropdown()
-	})
 	$scope.title = 'Goals'
 	$scope.options = [
 		{id: 1, name: 'Month'},
@@ -19,6 +16,11 @@ var GoalsController = function($scope,Goal){
 			}
 		)
 	}
+
+	$scope.$on('$viewContentLoaded', function() {
+		$('.dropdown').dropdown()
+	})
+	listGoals()
 	
 	$scope.saveGoals = function(){
 		$scope.goals.forEach(function(goal) {
@@ -27,14 +29,12 @@ var GoalsController = function($scope,Goal){
 	        $scope.message = {text: "Feito!"}
 	        listGoals()
 	      })
-	      .catch(function(err){
+				.catch(function(err){
 	        $scope.message = {text: "Não foi possível salvar."}
 	        console.log(err)
 	      })
 		});
 	}
-
-	listGoals()
 }
 GoalsController.$inject = ['$scope','Goal']
 
