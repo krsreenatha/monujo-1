@@ -3,4 +3,5 @@ module.exports = function(app){
 
 	app.route('/rules')
 		.get(controller.index)
+		.post(controller.save)
 }

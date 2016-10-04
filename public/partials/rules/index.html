@@ -1,3 +1,12 @@
+<div class="ui grid">
+  <h2 class="ui header four wide column">Sorting Rules</h2>
+  <div class="eleven wide column"></div>
+  <div class="one wide column">
+    <a href="#/rules/new">
+      <button class="ui button">+</button>
+    </a>
+  </div>
+</div>
 <div class="ui grid message">
   <div class="four wide column">
     <div class="field" placeholder="Last Name">
@@ -67,8 +76,8 @@
       <td>{{ rule.contains }}</td>
       <td>{{ rule.name }}</td>
       <td>{{ rule.category }}</td>
-      <td>{{ rule.tags }}</td>
-      <td>{{ rule.flag }}</td>
+      <td>{{ rule.tags.join(",") }}</td>
+      <td>{{ rule.flag_match }}</td>
     </tr>
   </tbody>
 </table>

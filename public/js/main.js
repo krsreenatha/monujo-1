@@ -46,6 +46,11 @@ app.config(function($routeProvider){
 		controller: 'RulesController'
 	})
 
+	$routeProvider.when('/rules/new', {
+		templateUrl: 'partials/rules/form.html',
+		controller: 'RuleController'
+	})
+
 	$routeProvider.when('/reports', {
 		templateUrl: 'partials/reports/index.html',
 		controller: 'ReportsController'

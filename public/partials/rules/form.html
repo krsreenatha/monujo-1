@@ -1,0 +1,35 @@
+<h1 class="ui header">New rule</h1>
+<div class="ui dividing"></div>
+<form class="ui form">
+  <div class="field six wide">
+    <label>Contains</label>
+    <div class="field">
+      <input type="text" name="contains" ng-model="rule.contains">
+    </div>
+  </div>
+  <div class="field six wide">
+    <label>Name</label>
+    <div class="field">
+      <input type="text" name="name" ng-model="rule.name">
+    </div>
+  </div>
+  <div class="field six wide">
+    <label>Category</label>
+    <div class="field">
+      <input type="text" name="category" ng-model="rule.category">
+    </div>
+  </div>
+  <div class="field six wide">
+    <label>Flag matches for view</label>
+    <div class="field">
+      <input type="text" name="flag_match" ng-model="rule.flag_match">
+    </div>
+  </div>
+  <div class="field six wide">
+    <label>Tags</label>
+    <div class="field">
+      <input type="text" name="tags" ng-model="rule.tags">
+    </div>
+  </div>
+  <div class="ui button" tabindex="0" ng-click="save()">Save</div>
+</form>
