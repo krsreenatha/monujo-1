@@ -1,10 +1,5 @@
 var GoalsController = function($scope,Goal){
 	$scope.title = 'Goals'
-	$scope.options = [
-		{id: 1, name: 'Month'},
-    {id: 2, name: 'Forthnight'},
-    {id: 3, name: 'Week'}
-	]
 	function listGoals(){
 		Goal.query(
 			function(goals){
@@ -16,11 +11,6 @@ var GoalsController = function($scope,Goal){
 			}
 		)
 	}
-
-	$scope.$on('$viewContentLoaded', function() {
-		$('.dropdown').dropdown()
-	})
-	listGoals()
 	
 	$scope.saveGoals = function(){
 		$scope.goals.forEach(function(goal) {
@@ -35,6 +25,11 @@ var GoalsController = function($scope,Goal){
 	      })
 		});
 	}
+
+	listGoals()
+	$scope.$on('$viewContentLoaded', function() {
+		$('.dropdown').dropdown()
+	})
 }
 GoalsController.$inject = ['$scope','Goal']
 
