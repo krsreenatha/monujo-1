@@ -1,10 +1,6 @@
 module.exports = function(app){
 	var controller = {}
 	var Account = app.models.account
-	
-	controller.index = function(req,res){
-		res.send(200)
-	}
 
 	controller.search = function(req,res){
 	  var search_pattern = {

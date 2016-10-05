@@ -56,6 +56,11 @@ app.config(function($routeProvider){
 		controller: 'ReportsController'
 	})
 
+	$routeProvider.when('/search', {
+		templateUrl: 'partials/search/index.html',
+		controller: 'SearchController'
+	})
+
 	$routeProvider.otherwise({redirectTo: '/dashboard'})
 
 })
