@@ -1,0 +1,24 @@
+<h1 class="ui header">Edit account</h1>
+<div class="ui dividing"></div>
+<form class="ui form">
+  <div class="field six wide">
+    <label>Name</label>
+    <div class="field">
+      <input type="text" name="name" ng-model="account.name">
+    </div>
+  </div>
+  <div class="field six wide">
+    <label>Number</label>
+    <div class="field">
+      <input type="text" name="number" ng-model="account.number">
+    </div>
+  </div>
+  <div class="field six wide">
+    <label>Type</label>
+    <div class="field">
+      <input type="text" name="type" ng-model="account.type">
+    </div>
+  </div>
+  <div class="ui button" tabindex="0" ng-click="save()">Save</div>
+  <a class="item" href="#/accounts/{{ account._id }}">Cancel</a>
+</form>

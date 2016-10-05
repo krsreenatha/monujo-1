@@ -1,15 +1,22 @@
 <div class="ui grid">
-	<div class="sixteen wide column">
+	<div class="fifteen wide column">
 		<h1>
 			{{ account.name }} &nbsp;
 			<small><small>{{ account.type }}</small></small>
 		</h1>
 	</div>
+	<div class="one wide column">
+		<div class="ui icon top left pointing dropdown button">
+		  <i class="wrench icon"></i>
+		  <div class="menu">
+		    <a class="item">Sort transactions</a>
+	    	<a class="item" href="#/accounts/{{ account._id }}/edit">Edit account</a>
+		  </div>
+		</div>
+	</div>
+	</div>
 	<div class="fifteen wide column">
 		{{ account.number }}
-	</div>
-	<div class="one wide column">
-		aehooooo
 	</div>
 </div>
 <div class="ui divider"></div>

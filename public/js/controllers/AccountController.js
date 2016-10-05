@@ -1,5 +1,4 @@
 var app = angular.module('monujo')
-
 app.controller('AccountController', function($scope, $routeParams, Account){
 	if($routeParams.account_id){
 		Account.get({id: $routeParams.account_id},
@@ -15,7 +14,7 @@ app.controller('AccountController', function($scope, $routeParams, Account){
 		$scope.account = new Account()
 	}
 
-	$scope.salvar = function(){
+	$scope.save = function(){
 		$scope.account.$save()
 		.then(function(){
 			$scope.message = {text: 'Feito!'}
@@ -24,12 +23,16 @@ app.controller('AccountController', function($scope, $routeParams, Account){
 				window.location = '#/'
 			},3000)
 		})
-	.catch(function(err){
-		$scope.message = {text: 'Unable to save.'}
-		console.log(err)
-	})
+		.catch(function(err){
+			$scope.message = {text: 'Unable to save.'}
+			console.log(err)
+		})
 	}
+	
+	$scope.$on('$viewContentLoaded', function() {
+		$('.dropdown').dropdown()
+	})
 })
 
 /*eslint no-console: ["error", { allow: ["log"] }] */
-/*global angular:true*/
+/*global angular $:true*/

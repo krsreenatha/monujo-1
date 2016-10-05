@@ -16,6 +16,11 @@ app.config(function($routeProvider){
 		controller: 'AccountController'
 	})
 
+	$routeProvider.when('/accounts/:account_id/edit', {
+		templateUrl: 'partials/account/form.html',
+		controller: 'AccountController'
+	})
+
 	$routeProvider.when('/goals', {
 		templateUrl: 'partials/goals/index.html',
 		controller: 'GoalsController'
@@ -65,4 +70,22 @@ app.config(function($routeProvider){
 
 })
 
-/*global angular:true*/
+app.controller('GlobalController', function($scope,Account){
+	function getAccounts(){
+		Account.query(
+			function(accounts){
+				$scope.accounts = accounts
+			},
+			function(err){
+				console.log('Unable to get accounts list.')
+				console.log(err)
+			})
+	}
+	
+	getAccounts()
+	$scope.$on('$viewContentLoaded', function() {
+		$('.dropdown').dropdown()
+	})
+})
+
+/*global angular $:true*/

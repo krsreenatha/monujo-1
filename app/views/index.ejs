@@ -43,49 +43,47 @@
 </head>
 
 <body>
-  <div class="ui secondary menu">
-      <a class="active item" href="#/">
-        <i class="money icon"></i>
-        Monujo
-      </a>
-      <a class="item" href="#/dashboard">
-        Dashboard
-      </a>
-      <div class="ui dropdown item">
-        Accounts
-        <div class="menu">
-          <a class="item" href="#/accounts/57e57c135e2e890c46afd5ca">Visa</a>
-          <a class="item" href="#/accounts/2">MasterCard</a>
-          <a class="item" href="#/accounts/3">Elo</a>
-        </div>
-      </div>
-      <a class="item" href="#/goals">
-        Goals
-      </a>
-      <a class="item" href="#/payments">
-        Payments
-      </a>
-      <a class="item" href="#/categories">
-        Categories
-      </a>
-      <a class="item" href="#/rules">
-        Sorting Rules
-      </a>
-      <a class="item" href="#/reports">
-        Reports
-      </a>
-      <div class="right menu">
-        <div class="item">
-          <div class="ui icon input">
-            <input type="text" placeholder="Search...">
-            <i class="search link icon"></i>
-          </div>
-        </div>
-        <a class="ui item">
-          Logout
-        </a>
+  <div class="ui secondary menu" ng-controller="GlobalController">
+    <a class="active item" href="#/">
+      <i class="money icon"></i>
+      Monujo
+    </a>
+    <a class="item" href="#/dashboard">
+      Dashboard
+    </a>
+    <div class="ui dropdown item">
+      Accounts
+      <div class="menu">
+        <a class="item" ng-repeat="account in accounts" href="#/accounts/{{ account._id }}">{{ account.name }}</a>
       </div>
     </div>
+    <a class="item" href="#/goals">
+      Goals
+    </a>
+    <a class="item" href="#/payments">
+      Payments
+    </a>
+    <a class="item" href="#/categories">
+      Categories
+    </a>
+    <a class="item" href="#/rules">
+      Sorting Rules
+    </a>
+    <a class="item" href="#/reports">
+      Reports
+    </a>
+    <div class="right menu">
+      <div class="item">
+        <div class="ui icon input">
+          <input type="text" placeholder="Search...">
+          <i class="search link icon"></i>
+        </div>
+      </div>
+      <a class="ui item">
+        Logout
+      </a>
+    </div>
+  </div>
   <div class="ui container">
     <div ng-view></div>
   </div>

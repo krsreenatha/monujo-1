@@ -3,6 +3,7 @@ module.exports = function(app){
 
 	app.route('/accounts')
 		.get(controller.index)
+		.post(controller.save)
 
 	app.route('/accounts/:id')
 		.get(controller.getAccount)

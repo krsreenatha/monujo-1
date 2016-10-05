@@ -3,29 +3,14 @@ module.exports = function(app){
 	var Account = app.models.account
 
 	controller.index = function(req,res){
-		var accounts = [
-			{
-				name: 'Bank Charges',
-				number: 1,
-				type: 1
-			},
-			{
-				name: 'Bills & Utilities',
-				number: 1,
-				type: 1
-			},
-			{
-				name: 'Business Expenses',
-				number: 1,
-				type: 1
-			},
-			{
-				name: 'Credit Card',
-				number: 1,
-				type: 1
-			}
-		]
-		res.json(accounts)
+		var promise = Account.find().exec()
+    .then(function(accounts){
+      res.json(accounts)
+    },
+    function(err){
+      console.error(err)
+      res.status(504).json(err)
+    })
 	}
 
 	controller.getAccount = function(req,res){
@@ -39,6 +24,35 @@ module.exports = function(app){
 			console.error(err)
 			res.status(404).json(err)
 		})
+	}
+	
+	controller.save = function(req,res){
+    var _id = req.body._id;
+    var data = {
+    	'name': req.body.name,
+			'number': req.body.number,
+			'type': req.body.type
+    };
+    if(_id){
+      Account.findByIdAndUpdate(_id, data).exec()
+      .then(function(account){
+        res.json(account);
+      },
+      function(err){
+        console.error(err);
+        res.status(500).json(err);
+      });
+    }
+    else{
+      Account.create(data)
+      .then(function(account){
+        res.status(201).json(account);
+      },
+      function(err){
+        console.error(err);
+        res.status(500).json(err);
+      });
+    }
 	}
 
 	return controller
