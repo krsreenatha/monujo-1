@@ -1,11 +1,6 @@
 <div class="ui grid">
   <h2 class="ui header four wide column">Search</h2>
-  <div class="eleven wide column"></div>
-  <div class="one wide column">
-    <a href="#/results/new">
-      <button class="ui button">+</button>
-    </a>
-  </div>
+  <div class="twelve wide column"></div>
 </div>
 <div class="ui grid message">
   <div class="ui row">
@@ -15,7 +10,7 @@
           Search for
         </div>
         <div class="ui input">
-          <input type="text" id="search" placeholder="e.g. Gifts" />
+          <input type="text" id="search" ng-model="search" placeholder="e.g. Gifts" />
         </div>
       </div>
   	</div>
@@ -40,7 +35,7 @@
           Start date
         </div>
         <div class="ui input">
-          <input type="text" id="from" placeholder="e.g. 2016-01-01" />
+          <input type="text" id="from" ng-model="from" placeholder="e.g. 2016-01-01" />
         </div>
       </div>
   	</div>
@@ -50,7 +45,7 @@
           End date
         </div>
         <div class="ui input">
-          <input type="text" id="to" placeholder="e.g. 2016-12-31" />
+          <input type="text" id="to" ng-model="to" placeholder="e.g. 2016-12-31" />
         </div>
       </div>
   	</div>
@@ -105,7 +100,7 @@
       <div class="ui">&nbsp;</div>
       <div class="ui">&nbsp;</div>
       <div class="ui center alligned">
-        <button class="ui secondary button">
+        <button class="ui secondary button" ng-click="performSearch()">
           Search
         </button>
       </div>
@@ -116,22 +111,21 @@
 <table class="ui table">
   <thead>
     <tr>
-      <th>Contains</th>
+      <th>Date</th>
       <th>Name</th>
       <th>Category</th>
-      <th>Tags</th>
-      <th>Flag</th>
+      <th>Spent</th>
+      <th>Received</th>
+      <th></th>
     </tr>
   </thead>
   <tbody ng-repeat="result in results">
-    <div ng-repeat="transaction in result.transaction">
-      <tr>
-        <td>{{ transaction.contains }}</td>
-        <td>{{ transaction.name }}</td>
-        <td>{{ transaction.category }}</td>
-        <td>{{ transaction.tags.join(",") }}</td>
-        <td>{{ transaction.flag_match }}</td>
-      </tr>
-    </div>
+    <tr ng-repeat="transaction in result.transaction | filter: {name: search}">
+      <td>{{ transaction.date }}</td>
+      <td>{{ transaction.name }}</td>
+      <td>{{ transaction.category }}</td>
+      <td>{{ transaction.spent }}</td>
+      <td>{{ transaction.received }}</td>
+    </tr>
   </tbody>
 </table>

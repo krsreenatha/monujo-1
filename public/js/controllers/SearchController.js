@@ -1,6 +1,6 @@
 var SearchController = function($scope,Search){
 	$scope.title = 'Search'
-	function performSearch(){
+	$scope.performSearch = function performSearch(){
 		Search.query(
 			function(results){
 				$scope.results = results
@@ -13,7 +13,7 @@ var SearchController = function($scope,Search){
 	$scope.$on('$viewContentLoaded', function() {
 		$('.dropdown').dropdown()
 	})
-	performSearch()
+	$scope.performSearch()
 }
 SearchController.$inject = ['$scope','Search']
 
