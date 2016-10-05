@@ -16,7 +16,11 @@
   <div class="field six wide">
     <label>Type</label>
     <div class="field">
-      <input type="text" name="type" ng-model="account.type">
+      <select class="ui dropdown" ng-model="account.type" convert-to-string>
+        <option value="0">Type 1</option>
+        <option value="1">Type 2</option>
+        <option value="2">Type 3</option>
+      </select>
     </div>
   </div>
   <div class="ui button" tabindex="0" ng-click="save()">Save</div>

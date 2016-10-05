@@ -16,13 +16,20 @@
   <div class="field six wide">
     <label>Category</label>
     <div class="field">
-      <input type="text" name="category" ng-model="rule.category">
+      <select class="ui dropdown" ng-model="rule.category" convert-to-string>
+        <option value="0">Category 1</option>
+        <option value="1">Category 2</option>
+        <option value="2">Category 3</option>
+      </select>
     </div>
   </div>
   <div class="field six wide">
     <label>Flag matches for view</label>
     <div class="field">
-      <input type="text" name="flag_match" ng-model="rule.flag_match">
+      <select class="ui dropdown" ng-model="rule.flag_match" convert-to-string>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
     </div>
   </div>
   <div class="field six wide">
