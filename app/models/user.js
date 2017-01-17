@@ -6,6 +6,10 @@ module.exports = function(){
 			type: String,
 			required: true
 		},
+		surname: {
+			type: String,
+			required: true
+		},
 		cpf: {
 			type: String,
 			required: true,
@@ -13,13 +17,21 @@ module.exports = function(){
 				unique: true
 			}
 		},
+		phone: {
+			type: String,
+			required: false
+		},
+		username: {
+			type: String,
+			required: true
+		},
 		email: {
 			type: String,
 			required: true
 		},
-		phone: {
+		password: {
 			type: String,
-			required: true
+			required: false
 		}
 	})
 
