@@ -1,4 +1,5 @@
-var app = angular.module('monujo')
+var app = angular.module('monujo');
+
 app.controller('PaymentController', function($scope,$routeParams,Payment){
 	if($routeParams.payment_id){
     Payment.get({id: $routeParams.payment_id},
@@ -28,7 +29,7 @@ app.controller('PaymentController', function($scope,$routeParams,Payment){
         console.log(err);
       });
   };
-})
+});
 
 /*eslint no-console: ["error", { allow: ["log"] }] */
 /*global angular:true*/

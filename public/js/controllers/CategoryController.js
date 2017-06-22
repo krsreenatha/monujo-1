@@ -1,4 +1,5 @@
-var app = angular.module('monujo')
+var app = angular.module('monujo');
+
 app.controller('CategoryController', function($scope,$routeParams,Category){
 	if($routeParams.category_id){
       Category.get({id: $routeParams.category_id},
@@ -29,7 +30,7 @@ app.controller('CategoryController', function($scope,$routeParams,Category){
           console.log(err);
         });
     };
-})
+});
 
 /*eslint no-console: ["error", { allow: ["log"] }] */
 /*global angular:true*/

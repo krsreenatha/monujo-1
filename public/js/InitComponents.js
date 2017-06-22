@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('.dropdown').dropdown()
-})
+	$('.dropdown').dropdown();
+});
 
 /*global $:true*/

@@ -1,4 +1,4 @@
-var mongoose = require("mongoose")
+var mongoose = require("mongoose");
 
 module.exports = function(app){
 	var schema = mongoose.Schema({
@@ -22,7 +22,7 @@ module.exports = function(app){
 			type: [String],
 			required: true
 		}
-	})
+	});
 	
-	return mongoose.model('Rule', schema)
+	return mongoose.model('Rule', schema);
 }

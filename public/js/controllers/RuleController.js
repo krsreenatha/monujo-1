@@ -1,4 +1,5 @@
-var app = angular.module('monujo')
+var app = angular.module('monujo');
+
 app.controller('RuleController', function($scope,$routeParams,Rule){
 	if($routeParams.rule_id){
       Rule.get({id: $routeParams.rule_id},
@@ -29,7 +30,7 @@ app.controller('RuleController', function($scope,$routeParams,Rule){
           console.log(err);
         });
     };
-})
+});
 
 /*eslint no-console: ["error", { allow: ["log"] }] */
 /*global angular:true*/
