@@ -5,7 +5,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'monujo',
     environment,
-    rootURL: '/',
+    rootURL: '/monujo',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -44,6 +44,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.locationType = 'hash';
+    ENV.rootURL = '/monujo/';
 
   }
 
